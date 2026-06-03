@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nana with Choiseung</title>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#6e0f12;
+background-image:
+radial-gradient(circle at top left,
+rgba(255,255,255,.05),
+transparent 30%);
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+padding:40px;
+}
+
+.logo{
+font-family:'Great Vibes',cursive;
+font-size:90px;
+color:#fff8f0;
+}
+
+.subtitle{
+font-family:'Playfair Display',serif;
+color:#fff8f0;
+letter-spacing:3px;
+margin-top:10px;
+font-size:18px;
+}
+
+.question{
+margin-top:60px;
+font-family:'Playfair Display',serif;
+font-size:34px;
+color:#fff8f0;
+line-height:1.5;
+}
+
+button{
+border:none;
+cursor:pointer;
+padding:16px 36px;
+border-radius:50px;
+font-size:20px;
+margin:10px;
+transition:.3s;
+font-family:'Playfair Display',serif;
+}
+
+#yesBtn{
+background:#fff8f0;
+color:#6e0f12;
+font-weight:bold;
+box-shadow:0 0 20px rgba(255,255,255,.3);
+}
+
+#noBtn{
+background:transparent;
+border:2px solid #fff8f0;
+color:#fff8f0;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="logo">
+Nana & Choiseung
+</div>
+
+<div class="question">
+Do you agree Nana with Choiseung?
+</div>
+
+<div class="buttons">
+<button id="yesBtn">YES </button>
+<button id="noBtn">NO </button>
+</div>
+
+</div>
+
+<script>
+
+let yesBtn = document.getElementById("yesBtn");
+let noBtn = document.getElementById("noBtn");
+
+let size = 20;
+
+noBtn.addEventListener("click",()=>{
+
+size += 10;
+
+yesBtn.style.fontSize = size + "px";
+yesBtn.style.padding =
+(size/2) + "px " + size + "px";
+
+});
+
+yesBtn.addEventListener("click",()=>{
+
+window.location.href="love.html";
+
+});
+
+</script>
+
+</body>
+</html>
